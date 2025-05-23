@@ -1,6 +1,6 @@
 # World’s Oldest Businesses Analysis Project
 
-![Staffelter Hof Winery](images/MKn_Staffelter_Hof.jpg)
+![Staffelter Hof Winery](images/MKn_Staffelter_Hof.jpeg)
 
 ## Overview
 Ce projet analyse les entreprises les plus anciennes encore en activité à travers le monde, tel que compilé par BusinessFinancing.co.uk. L’objectif est de comprendre la longévité des entreprises selon les pays, les catégories et les périodes historiques.
