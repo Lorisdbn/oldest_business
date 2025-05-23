@@ -11,20 +11,28 @@ Ce projet analyse les entreprises les plus anciennes encore en activité à trav
 3. Analyser la répartition des entreprises anciennes par continent.  
 4. Comparer la création de nouvelles entreprises (depuis 1900) avec la base historique.
 
-## Structure du dépôt
-```bash
-├── data/                  # Fichiers CSV nettoyés
-│   ├── businesses.csv     # Entreprises historiques
-│   ├── new_businesses.csv # Entreprises créées depuis 1900
-│   ├── countries.csv      # Référentiel des pays
-│   └── categories.csv     # Référentiel des catégories
-├── images/                # Illustrations et photos référencées
-│   └── MKn_Staffelter_Hof.jpg
-├── sql/                   # Requêtes SQL pour l’analyse
-│   ├── 01_count_businesses.sql
-│   ├── 02_oldest_business.sql
-│   ├── 03_businesses_by_continent.sql
-│   └── 04_new_vs_historical.sql
-├── results/               # Résultats des requêtes et graphiques
-├── README.md              # Documentation du projet
-└── requirements.txt       # Dépendances Python (pour analyses complémentaires)
+## Structure du dépôt / Data schema
+
+### Tables `businesses` et `new_businesses`
+
+| Column          | Description                                  | Data Type |
+|-----------------|----------------------------------------------|-----------|
+| `business`      | Name of the business                         | varchar   |
+| `year_founded`  | Year the business was founded                | int       |
+| `category_code` | Code for the business category               | varchar   |
+| `country_code`  | ISO 3166-1 three-letter country code         | char      |
+
+### Table `countries`
+
+| Column          | Description                                              | Data Type |
+|-----------------|----------------------------------------------------------|-----------|
+| `country_code`  | ISO 3166-1 three-letter country code                     | varchar   |
+| `country`       | Name of the country                                      | varchar   |
+| `continent`     | Name of the continent the country exists in              | varchar   |
+
+### Table `categories`
+
+| Column           | Description                            | Data Type |
+|------------------|----------------------------------------|-----------|
+| `category_code`  | Code for the business category         | varchar   |
+| `category`       | Description of the business category   | varchar   |
